@@ -1,0 +1,10 @@
+services:
+
+  php:
+    build: ./
+    container_name: learning-php
+    environment:
+      - APACHE_RUN_USER=www-data
+    working_dir: /var/www/html/
+    volumes:
+      - ./learn/:var/www/html/
